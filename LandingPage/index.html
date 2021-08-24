@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CDNs -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Homepage</title>
+</head>
+
+<body>
+    <header class="bg-image" style="background-image: url('../img/slider_1.jpg');height: 100vh;">
+            <div class="text-end p-5">
+                <button onclick="loginRegisterBoxAppear(this)" id="register" type="button" class="btn btn-primary btn-lg">Register</button>
+                <button onclick="loginRegisterBoxAppear(this)" id="signin" type="button" class="btn btn-secondary btn-lg btn-success">Sign In</button>
+            </div>
+    </header>
+
+    <script>
+        const img = new Image();
+        img.src = '../img/slider_1.jpg';
+        img.onload = function() {
+            console.log(this.width + 'x' + this.height);
+            var headerTag = document.getElementsByTagName('header')[0];
+            headerTag.style.backgroundImage = "url('"+ this.src +"')";
+            headerTag.style.height = this.height-280 + "px";
+            headerTag.style.backgroundSize = "contain";
+            headerTag.style.backgroundRepeat = "no-repeat";
+        }
+    </script>
+
+    <div id="logRegBox" class="login-register-box ps-5 pe-5 pb-5 pt-4">
+        <div class="d-flex justify-content-between">
+            <h4 id="login-register-box-title">Sign Up</h4>
+            <span onclick="loginRegisterBoxDisappear()" class="closeIcon"><i class="fas fa-times"></i></span>
+        </div>
+        
+        <button type="button" class="btn btn-primary btn-lg m-2 button-width"><span class="me-1"><i class="fas fa-school"></i></span> Institution <span class="auth-state">Signup</span></button>
+        <button id="teacher-button" type="button" class="btn btn-primary btn-lg m-2 button-width"><span class="me-1"><i class="fas fa-chalkboard-teacher"></i></span> Teacher <span class="auth-state">Signup</span></button>
+        <button type="button" class="btn btn-primary btn-lg m-2 button-width"><span class="me-1"><i class="fas fa-user-graduate"></i></span> Student <span class="auth-state">Signup</span></button>
+
+    </div>
+
+    <script>
+        function loginRegisterBoxAppear(event){
+            let authStateElements = document.getElementsByClassName("auth-state");
+            if(event.id === 'register'){
+                document.getElementById("login-register-box-title").textContent = "Register";
+                document.getElementById("teacher-button").style.display = "none";
+            }
+            else if(event.id === 'signin'){
+                document.getElementById("login-register-box-title").textContent = "Sign In";
+                document.getElementById("teacher-button").style.display = "block";
+            }
+
+            for(let i = 0; i < authStateElements.length; i++){
+                if(event.id === 'register'){
+                    authStateElements[i].textContent = "Register";
+                }
+                else if(event.id === 'signin'){
+                    authStateElements[i].textContent = "Sign In";
+                }
+            }
+
+            document.getElementById("logRegBox").style.display = "block";
+            document.getElementById("logRegBox").style.opacity = "1";
+        }
+        
+        function loginRegisterBoxDisappear(){
+            document.getElementById("logRegBox").style.opacity = "0";
+            document.getElementById("logRegBox").style.display = "block";
+        }
+    </script>
+
+    <section class="mt-5 pb-5">
+        <h3 class="text-center section-header ">Recent Added Schools</h3>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="m-5">
+                        <div class="row justify-content-center">
+                            <div class="col-3">
+                                <img class="img-fluid img-thumbnail" src="/img/person.png" alt="" />
+                            </div>
+                            <div class="col-7">
+                                <p class="school-description">
+                                    Willes Little Flower School and College is one of the three first English medium
+                                    school in Dhaka, Bangladesh and was established in 1956 by philanthropist Josephine
+                                    Willes.
+                                </p>
+                                <p>
+                                    Address: 85 Bir Uttam Samsul Alam Sarak, Dhaka 1000
+                                </p>
+                                <p>
+                                    Founded: 1956
+                                </p>
+                                <p>
+                                    Phone: 02-48310703
+                                </p>
+                                <p>
+                                    Available Medium: EV, EM , BM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="mt-5 pb-5">
+        <h3 class="text-center section-header">About Us</h3>
+        <div class="row mt-5 justify-content-around">
+            <div class="col-3 bg-secondary rounded rounded-3">
+                <div class="m-5">
+                    <p class="fw-bold text-center">Best In Quality</p>
+                    <p>We do this and that bla bla bla</p>
+                </div>
+            </div>
+
+            <div class="col-3 bg-secondary rounded rounded-3">
+                <div class="m-5">
+                    <p class="fw-bold text-center">Best In Quality</p>
+                    <p>We do this and that bla bla bla</p>
+                </div>
+            </div>
+
+            <div class="col-3 bg-secondary rounded rounded-3">
+                <div class="m-5">
+                    <p class="fw-bold text-center">Best In Quality</p>
+                    <p>We do this and that bla bla bla</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="mt-5 pb-5">
+        <h3 class="text-center section-header ">Recent Added Schools</h3>
+        <div id="carouselExampleIndicators" class="carousel slide carousel-dark" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="m-5">
+                        <div class="row justify-content-center">
+                            <div class="col-3">
+                                <img style="max-width: 50%;" class="img-fluid img-thumbnail rounded-circle" src="/img/person.png" alt="" />
+                            </div>
+                            <div class="col-7">
+                                <div class="ms-3">
+                                    <span class="school-description fw-bold h4">
+                                        Mr. Tut Tut
+                                    </span>
+                                    <p>
+                                        Address: 85 Bir Uttam Samsul Alam Sarak, Dhaka 1000
+                                    </p>
+                                </div>
+                                
+                                <blockquote class="fst-italic">
+                                    Willes Little Flower School and College is one of the three first English medium
+                                        school in Dhaka, Bangladesh and was established in 1956 by philanthropist Josephine
+                                        Willes.
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <footer class="p-5 bg-info text-white">
+        <div class="container align-item-center justify-content-between ">
+            <div class="row align-item-center justify-content between">
+                <div class="col-md-4  col-lg-4">
+                    <h2 class="lead">Daffodil International University</h2>
+                    <p>Daffodil Road, Ashulia, Bangladesh <br>
+                        E-mail: info@daffodilvarsity.edu.bd</p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h2 class="lead">Daffodil International University</h2>
+                    <p>Daffodil Road, Ashulia, Bangladesh <br>
+                        E-mail: info@daffodilvarsity.edu.bd</p>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h2 class="lead">Daffodil International University</h2>
+                    <p>BLC guidelines for students <br>
+                        BLC guidelines for teachers <br>
+                        Privacy Policy <br>
+                        Terms of Use</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="mt-5">
+
+        <div class="mb-0">
+            <div class="row">
+
+                <div class="col-md-9 mt-2 sight-footer-legal">
+                    <a href="#" class="text-white">Copyrwrite &copy; 2020 Daffodil International University. All Rights
+                        Reserved. </a>
+                </div>
+                <div class="col-md-3 mt-2 sight-footer-right">
+                    <p> <span class="text-dark">You are not logged in.</span> (Log in) </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
