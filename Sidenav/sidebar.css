@@ -1,7 +1,8 @@
- .active-list {
+
+/* Sidebar CSS */
+.active-list {
     background-color: #EDF4FD ;
 }
-
 
 .clickable {
   cursor: pointer;
@@ -11,10 +12,15 @@
   color: #e79696;
 }
 
+.sidebar-item:hover {
+  background-color: bisque;
+}
+
 #sidebar-logout{
     display: none;
 
 }
+
 @media only screen and (max-width: 768px) {
     #sidebar-logout {
       display: block;
