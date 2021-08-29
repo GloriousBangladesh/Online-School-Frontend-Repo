@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/sidebar.css">
+
+  <!-- Bootstrap CDNs -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>side nav</title>
+</head>
+<body>
+
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-info" style=" position: fixed; width: 100%; z-index: 100; ">
+      <div class="container-fluid my-auto">
+      <a class="navbar-brand my-auto">
+          <p class="text-dark mb-0"><span onclick="toggleSidebar()" class="clickable ms-2 me-3"><i class="fa fa-bars" aria-hidden="true"></i></span>Student Authority Dashboard</p>  
+      </a>
+      <div class="my-auto">
+          <div class="collapse navbar-collapse my-auto">
+          <p class="text-dark me-5 lead mb-0"><span class="clickable"><span class="me-3"><i class="fas fa-sign-out-alt" aria-hidden="true"></span></i>Logout</span></p>
+          </div>
+      </div>
+      </div>
+  </nav>
+  
+  <!-- sidenav -->
+  <section style="position: fixed; z-index: 90; margin-top: 50px;">
+      <div id="sidebar" class=" flex-column flex-shrink-0 p-3 text-dark shadow" style="width: 0px; height: 100vh;opacity: 0;transition: 0.5s; display: none;    background-color: white;">
+      <!-- <div href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          </div> -->
+      <ul class="nav nav-pills flex-column mb-auto">
+          <li class="active-list">
+          <a href="#" class="nav-link" aria-current="page">
+              <span class="me-2"><i class="fas fa-home"></i></span> 
+              <span>Dashboard</span> 
+          </a>
+          </li>
+          <li class="sidebar-item">
+          <a href="#" class="nav-link text-dark">
+              <span class="me-2"><i class="fas fa-chalkboard-teacher"></i></span> 
+              <span>Online Classes</span>
+          </a>
+          </li>
+          <li class="sidebar-item">
+          <a href="#" class="nav-link text-dark">
+              <span class="me-2"><i class="fas fa-book-reader"></i></span>
+              <span>Classmates</span>
+          </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="nav-link text-dark">
+                <span class="me-2"><i class="fas fa-book"></i></span>
+                <span>Notes</span>
+            </a>
+            </li>
+          <li class="sidebar-item">
+          <a href="#" class="nav-link text-dark">
+              <span class="me-2"><i class="fas fa-sticky-note"></i></span>
+              <span>Posts</span>
+          </a>
+          </li>
+          <li class="sidebar-item">
+          <a href="#" class="nav-link text-dark">
+              <span class="me-2"><i class="fas fa-envelope"></i></span>
+              <span>Messages</span>
+          </a>
+          </li>
+          <li class="sidebar-item">
+          <a href="#" class="nav-link text-dark">
+              <span class="me-2"><i class="fas fa-pen-square"></i></span>
+              <span>Exam</span>
+          </a>
+          </li>
+          <li id="sidebar-logout" class="sidebar-item">
+          <a href="#" class="nav-link text-dark">
+              <span class="me-2" ><i class="fas fa-sign-out-alt" aria-hidden="true"></i></span>
+              <span>Logout</span>
+          </a>
+          </li>
+      </ul>
+      </div>
+  </section>
+
+    <div class="container my-auto justify-content-center p-5 mb-5" style="padding-top: 70px !important;">
+        <h1>Select An Action To....... </h1>
+        <div class="row justify-content-center">
+          <div  style="border-radius: 10px !important;" class="p-3  bg-info mt-4 border text-center rounded-3 col-md-5 m-4">
+            <div class="row  justify-content-around">
+              <div class="align-middle  fs-4 category-name col-md-12"><i class="me-3 fas fa-chalkboard-teacher"></i>Online Classes</div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+          <div  style="border-radius: 10px !important;" class="p-3 bg-info mt-4 border text-center rounded-3 col-md-5 m-4">
+            <div class="row justify-content-around">
+              <div class="align-middle fs-4 category-name col-md-12"><i class=" me-3 fas fa-book-reader"></i>Classmates</div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+          <div  style="border-radius: 10px !important;" class="p-3 bg-info mt-4 border text-center rounded-3 col-md-5 m-4">
+            <div class="row justify-content-around">
+              <div class="align-middle fs-4 category-name  col-md-12"><i class="me-3 fas fa-book"></i>Notes</div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+          <div  style="border-radius: 10px !important;" class="p-3 bg-info mt-4 border text-center rounded-3 col-md-5 m-4">
+            <div class="row justify-content-around">
+              <div class="align-middle fs-4 category-name col-md-12"><i class="me-3 fas fa-sticky-note"></i>Posts</div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+          <div  style="border-radius: 10px !important;" class="p-3 bg-info mt-4 border text-center rounded-3 col-md-5 m-4">
+            <div class="row justify-content-around">
+              <div class="align-middle fs-4 category-name ms-5 col-md-12"><i class="me-3 fas fa-envelope"></i>Messages</div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+          <div  style="border-radius: 10px !important;" class="p-3 bg-info mt-4 border text-center rounded-3 col-md-5 m-4">
+            <div class="row justify-content-around">
+              <div class="align-middle fs-4 category-name col-md-12"><i class="me-3 fas fa-pen-square"></i>Exam</div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+         
+          
+        </div>
+    
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+      <script src="js/sidebar.js"></script>  
+</body>
+</html>

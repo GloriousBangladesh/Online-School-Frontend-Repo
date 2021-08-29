@@ -9,6 +9,14 @@ function openNav() {
     sidebar.style.width = "280px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
   },100);
+
+  let bgElemenets = document.querySelectorAll(".bg-light");
+
+  for(var i = 0; i < bgElemenets.length; i++){
+    bgElemenets[i].classList.toggle("bg-light");
+  }
+
+
 }
 
 /* Set the width of the side navigation to 0 */
@@ -20,6 +28,12 @@ function closeNav() {
   setTimeout(function(){
     sidebar.style.display = "none";
   },300);
+
+  let bgElemenets = document.querySelectorAll(".bg-light");
+
+  for(var i = 0; i < bgElemenets.length; i++){
+    bgElemenets[i].classList.toggle("bg-light");
+  }
 }
 
 function toggleSidebar() {

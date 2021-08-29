@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-md navbar-light bg-info" style=" position: fixed; width: 100%; z-index: 100; ">
         <div class="container-fluid my-auto">
         <a class="navbar-brand my-auto">
-            <p class="text-dark mb-0"><span onclick="toggleSidebar()" class="clickable ms-2 me-3"><i class="fa fa-bars" aria-hidden="true"></i></span> Teacher Authority Dashboard</p>  
+            <p class="text-dark mb-0"><span onclick="toggleSidebar()" class="clickable ms-2 me-3"><i class="fa fa-bars" aria-hidden="true"></i></span>Student Authority Dashboard</p>  
         </a>
         <div class="my-auto">
             <div class="collapse navbar-collapse my-auto">
@@ -47,19 +47,25 @@
             <li class="sidebar-item">
             <a href="#" class="nav-link text-dark">
                 <span class="me-2"><i class="fas fa-chalkboard-teacher"></i></span> 
-                <span>Classes</span>
+                <span>Online Classes</span>
             </a>
             </li>
             <li class="sidebar-item">
             <a href="#" class="nav-link text-dark">
                 <span class="me-2"><i class="fas fa-book-reader"></i></span>
-                <span>Students</span>
+                <span>Classmates</span>
             </a>
             </li>
             <li class="sidebar-item">
+              <a href="#" class="nav-link text-dark">
+                  <span class="me-2"><i class="fas fa-book"></i></span>
+                  <span>Notes</span>
+              </a>
+              </li>
+            <li class="sidebar-item">
             <a href="#" class="nav-link text-dark">
                 <span class="me-2"><i class="fas fa-sticky-note"></i></span>
-                <span>Post To Feed</span>
+                <span>Posts</span>
             </a>
             </li>
             <li class="sidebar-item">
@@ -84,10 +90,10 @@
         </div>
     </section>
 
-    <section class="text-dark p5">
+    <section class="text-dark p5" style="padding-top: 70px !important;">
 
         <div class="container">
-            <h2 class="text-left section-header">Add Teachers To Classes</h2>
+            <h2 class="text-left section-header">Online Classes</h2>
 
                 <div class="mt-5 mb-5 row">
 
@@ -114,7 +120,7 @@
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#classone" aria-expanded="false" aria-controls="classone">
-                                Class 1 (Bangla)
+                                Bangla
                             </button>
                         </h2>
 
@@ -137,7 +143,7 @@
                         <h2 class="accordion-header" id="headerTwo">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#classTwo" aria-expanded="false" aria-controls="classTwo">
-                                Class 2 (English)
+                                English
                             </button>
                         </h2>
                         <div id="classTwo" class="accordion-collapse collapse" aria-labelledby="headerTwo"

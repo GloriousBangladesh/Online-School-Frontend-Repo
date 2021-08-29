@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <header class="bg-image" style="background-image: url('../img/slider_1.jpg');height: 100vh;">
+    <header class="bg-image" style="background-image: url('img/slider_1.jpg');height: 100vh;">
             <div class="text-end p-5">
                 <button onclick="loginRegisterBoxAppear(this)" id="register" type="button" class="btn btn-primary btn-lg">Register</button>
                 <button onclick="loginRegisterBoxAppear(this)" id="signin" type="button" class="btn btn-secondary btn-lg btn-success">Sign In</button>
@@ -27,7 +27,7 @@
 
     <script>
         const img = new Image();
-        img.src = '../img/slider_1.jpg';
+        img.src = 'img/slider_1.jpg';
         img.onload = function() {
             console.log(this.width + 'x' + this.height);
             var headerTag = document.getElementsByTagName('header')[0];
@@ -97,7 +97,7 @@
                     <div class="m-5">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img class="img-fluid img-thumbnail" src="/img/person.png" alt="" />
+                                <img class="img-fluid img-thumbnail" src="img/person.png" alt="" />
                             </div>
                             <div class="col-7">
                                 <p class="school-description">
@@ -178,7 +178,7 @@
                     <div class="m-5">
                         <div class="row justify-content-center">
                             <div class="col-3">
-                                <img style="max-width: 50%;" class="img-fluid img-thumbnail rounded-circle" src="/img/person.png" alt="" />
+                                <img style="max-width: 50%;" class="img-fluid img-thumbnail rounded-circle" src="img/person.png" alt="" />
                             </div>
                             <div class="col-7">
                                 <div class="ms-3">
