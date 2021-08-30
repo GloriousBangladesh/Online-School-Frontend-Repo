@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notice</title>
+    <title>Posts - {APP_NAME}</title>
 
     <link rel="stylesheet" href="css/sidebar.css">
-
+    
     <!-- Bootstrap CDNs -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
@@ -23,7 +23,7 @@
   <nav class="navbar navbar-expand-md navbar-light bg-info" style=" position: fixed; width: 100%; z-index: 100; ">
     <div class="container-fluid my-auto">
       <a class="navbar-brand my-auto">
-        <p class="text-dark mb-0"><span onclick="toggleSidebar()" class="clickable ms-2 me-3"><i class="fa fa-bars" aria-hidden="true"></i></span> Teacher Authority Dashboard</p>  
+        <p class="text-dark mb-0"><span onclick="toggleSidebar()" class="clickable ms-2 me-3"><i class="fa fa-bars" aria-hidden="true"></i></span>Post To Feed</p>  
       </a>
       <div class="my-auto">
         <div class="collapse navbar-collapse my-auto">
@@ -39,8 +39,8 @@
       <!-- <div href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
         </div> -->
       <ul class="nav nav-pills flex-column mb-auto">
-        <li class="active-list">
-          <a href="#" class="nav-link" aria-current="page">
+        <li>
+          <a href="#" class="nav-link text-dark" aria-current="page">
             <span class="me-2"><i class="fas fa-home"></i></span> 
             <span>Dashboard</span> 
           </a>
@@ -57,8 +57,8 @@
             <span>Students</span>
           </a>
         </li>
-        <li class="sidebar-item">
-          <a href="#" class="nav-link text-dark">
+        <li class="sidebar-item active-list">
+          <a href="#" class="nav-link">
             <span class="me-2"><i class="fas fa-sticky-note"></i></span>
             <span>Post To Feed</span>
           </a>
@@ -93,7 +93,17 @@
     <section class=" p-5 pt-0 container mt-5">
       <div class="row">
        <div class="col-md-10 col-7 my-auto">
-        <input class=" form-control" type="text" placeholder="Notice Title" aria-label="Notice Title">
+        <!-- <input class=" form-control" type="text" placeholder="Notice Title" aria-label="Notice Title"> -->
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Select Class
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li onclick="dropdown(this)"><a class="dropdown-item" href="#">Class 1</a></li>
+              <li onclick="dropdown(this)"><a class="dropdown-item" href="#">Class 2</a></li>
+              <li onclick="dropdown(this)"><a class="dropdown-item" href="#">Class 5</a></li>
+            </ul>
+          </div>
        </div>
         <div class=" d-md-block col-md-2 col-4 btn">
           <button class="btn btn-info" type="button">Publish</button>
@@ -184,6 +194,7 @@
     </section>
   </div>
   
-    <script src="js/sidebar.js"></script>   
+    <script src="js/sidebar.js"></script>
+    <script src="js/dropdown.js"></script>
 </body>
 </html>
