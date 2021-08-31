@@ -31,14 +31,15 @@
                 
                 <div class="dropdown mb-3">
                     <a class="btn btn-secondary" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                      <span class="">Institution Type</span> <span class=""><i class="fas fa-angle-down"></i></span>
+                      <span id="dropdownMenuLinkText" class="">Institution Type</span> <span class=""><i class="fas fa-angle-down"></i></span>
                     </a>
                   
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="">
-                      <li><a class="dropdown-item" href="#">School</a></li>
-                      <li><a class="dropdown-item" href="#">College</a></li>
-                      <li><a class="dropdown-item" href="#">University</a></li>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <li onclick="dropdown(this)"><a class="dropdown-item" href="#">School</a></li>
+                      <li onclick="dropdown(this)"><a class="dropdown-item" href="#">College</a></li>
+                      <li onclick="dropdown(this)"><a class="dropdown-item" href="#">University</a></li>
                     </ul>
+                    
                 </div>
 
                 <div class="input-group mb-3">
@@ -57,11 +58,14 @@
                 <div class="input-group mb-3">
                     <input type="number" class="form-control" placeholder="Inst. Phone Number" aria-label="Inst. Phone Number" aria-describedby="basic-addon1">
                 </div>
+                <input id="institute-type" type="hidden" name="type" value="">
+
                 <button type="button" class="btn btn-primary">Register</button>
             </div>
             
 
         </div>
     </section>
+    <script src="js/dropdown.js"></script>
 </body>
 </html>
