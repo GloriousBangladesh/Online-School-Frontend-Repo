@@ -72,559 +72,73 @@
         </div>
       </section>
 
-  <section class="p-5 pt-0" style="padding-top: 70px !important;">
-    <div class="p-3 pb-0"><h3>Add Students to Classes</h3></div>
-              <!--input bar for classes button to add class-->
-        <div class="row my-auto">
-            <div class="p-4 col-md-3 ">
-                <input class=" form-control" type="text" placeholder="Class name i.e class 6" aria-label="default input example">
-            </div>
-            <div class="p-4 col-md-2 btn">
-                    <button type="button" class="btn btn-outline-dark"> + Add
-                    </button>
-            </div>
-        </div>
-        
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-
-          <!-- Class 1  section -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading1">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
-                Class 1
-              </button>
-            </h2>
-            <div id="flush-collapse1" class="accordion-collapse collapse" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <!-- Form row to input student Info -->
-                <div class="row mb-3">
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Name" aria-label="Student's Name">
+      <section class="p-3 pt-0" style="padding-top: 70px !important;">
+        <div class="p-3 pb-0"><h3>Students</h3></div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+    
+              <!-- Class 1  section -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse1" aria-expanded="false" aria-controls="flush-collapse1">
+                    Class 1
+                  </button>
+                </h2>
+                <div id="flush-collapse1" class="accordion-collapse collapse show" aria-labelledby="flush-heading1" data-bs-parent="#accordionFlushExample">
+                  
+                  <div class="row justify-content-start justify-content-md-center table-responsive mx-2">
+                    <table style="margin: 0 auto;" class="table col-12">
+                      <thead>
+                        <tr class="d-flex">
+                         <th scope="col">#</th>
+                         <th scope="row" class="col-3 col-md-2">Name</th>
+                         <th scope="col" class="col-4 col-md-2">Email</th>
+                         <th scope="col" class="col-1 col-md-1">Roll</th>
+                         <th scope="col" class="col-3 col-md-2">Phone Number</th>
+                         <th scope="col" class="col-3 col-md-2">Father's Name</th>
+                         <th scope="col" class="col-3 col-md-2">Mother's Name</th>
+                         <th scope="col" class="col-4 col-md-2">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <!-- Looping Content -->
+                        <tr class="d-flex" >
+                          <th scope="row">1</th>
+                          <td class="col-3 col-md-2">Md Rakib Hasan</td>
+                          <td class="col-4 col-md-2">rakibrakib@gmail.com</td>
+                          <td class="col-1 col-md-1">11</td>
+                          <td class="col-3 col-md-2">+88017xxxxxxxxx</td>
+                          <td class="col-3 col-md-2">Abdul Jalil</td>
+                          <td class="col-3 col-md-2">Nayla Banu</td>
+                          <td class="col-4 col-md-2">
+                            <button type="button" class="btn btn-primary btn-sm" style="padding: 0px;font-size: small;"><span class="me-2 ms-1"><i class="fas fa-user"></i></span><span class="me-2">Profile</span></button>
+                            <button type="button" class="btn btn-primary btn-sm" style="padding: 0px;font-size: small;"><span class="me-2 ms-1"><i class="fas fa-envelope"></i></span><span class="me-2">Message</span></button>
+                          </td>
+                        </tr>
+                        <!-- Looping Content -->
+                        <!-- Looping Content -->
+                        <tr class="d-flex" >
+                          <th scope="row">2</th>
+                          <td class="col-3 col-md-2">Abid Hasan</td>
+                          <td class="col-4 col-md-2">abidhasan1211@gmail.com</td>
+                          <td class="col-1 col-md-1">52</td>
+                          <td class="col-3 col-md-2">+88019xxxxxxxxx</td>
+                          <td class="col-3 col-md-2">_____ ______</td>
+                          <td class="col-3 col-md-2">------ -------</td>
+                          <td class="col-4 col-md-2">
+                            <button type="button" class="btn btn-primary btn-sm" style="padding: 0px;font-size: small;"><span class="me-2 ms-1"><i class="fas fa-user"></i></span><span class="me-2">Profile</span></button>
+                            <button type="button" class="btn btn-primary btn-sm" style="padding: 0px;font-size: small;"><span class="me-2 ms-1"><i class="fas fa-envelope"></i></span><span class="me-2">Message</span></button>
+                          </td>
+                        </tr>
+                        <!-- Looping Content -->
+                      </tbody>
+                    </table>
                   </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Email" aria-label="Student's Email">
-                  </div>
-                  <div class="col-1">
-                    <input type="text" class="form-control" placeholder="Roll" aria-label="Class Roll">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Contact No." aria-label="Student's Contact No.">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Father's Name" aria-label="Father's Name">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Mother's Name" aria-label="Mother's Name">
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success">+ Add</button>
-                  </div>
+    
                 </div>
-                <!-- Inputted info saved in a row -->
-                <div class="row">
-                  <div class="col-2">
-                      <div >
-                          <small>Rakib hasan</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>rakibrakib@gmail.com</small>
-                      </div>
-                  </div>
-                  <div class="col-1 ">
-                      <div >
-                          <small>11</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>0128xxxxxx</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>Abdul Jalil</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                    <div >
-                        <small>Layla Banu</small>
-                    </div>
-                  </div>
-                  <div class="col-1">
-                    <div class="justify-content-around">
-                      <button type="button" class="btn btn-outline-danger btn-sm col-5" style="padding: 0px;font-size: small;"><i class="fas fa-times" aria-hidden="true"></i></button>
-                      <button type="button" class="btn btn-outline-success btn col-5" style="padding: 0px;font-size: small;"><i class="fas fa-check" aria-hidden="true"></i></button>
-                    </div>
-                  </div>
-                </div>
-
-                div class="row">
-                  <div class="col-2">
-                      <div >
-                          <small>Rakib hasan</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>rakibrakib@gmail.com</small>
-                      </div>
-                  </div>
-                  <div class="col-1 ">
-                      <div >
-                          <small>11</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>0128xxxxxx</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>Abdul Jalil</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                    <div >
-                        <small>Layla Banu</small>
-                    </div>
-                  </div>
-                  <!-- <div class="col-1">
-                    <div class="justify-content-around">
-                      <button type="button" class="btn btn-outline-danger btn-sm col-5" style="padding: 0px;font-size: small;"><i class="fas fa-times" aria-hidden="true"></i></button>
-                      <button type="button" class="btn btn-outline-success btn col-5" style="padding: 0px;font-size: small;"><i class="fas fa-check" aria-hidden="true"></i></button>
-                    </div>
-                  </div> -->
-                </div>
-
-                <div class="row">
-                  <div class="col-2">
-                      <div >
-                          <small>Rakib hasan</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>rakibrakib@gmail.com</small>
-                      </div>
-                  </div>
-                  <div class="col-1 ">
-                      <div >
-                          <small>11</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>0128xxxxxx</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>Abdul Jalil</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                    <div >
-                        <small>Layla Banu</small>
-                    </div>
-                  </div>
-                  <div class="col-1">
-                    <div class="justify-content-around">
-                      <button type="button" class="btn btn-outline-danger btn-sm col-5" style="padding: 0px;font-size: small;"><i class="fas fa-times" aria-hidden="true"></i></button>
-                      <button type="button" class="btn btn-outline-success btn col-5" style="padding: 0px;font-size: small;"><i class="fas fa-check" aria-hidden="true"></i></button>
-                    </div>
-                  </div>
-                </div>
-
               </div>
             </div>
-          </div>
-
-          <!-- Class 2  section -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading2">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
-                Class 2
-              </button>
-            </h2>
-            <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-heading2" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <div class="row mb-3">
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Name" aria-label="Student's Name">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Email" aria-label="Student's Email">
-                  </div>
-                  <div class="col-1">
-                    <input type="text" class="form-control" placeholder="Class Roll" aria-label="Class Roll">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Contact No." aria-label="Student's Contact No.">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Father's Name" aria-label="Father's Name">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Mother's Name" aria-label="Mother's Name">
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success">+ Add</button>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-2 ">
-                      <div >
-                          <small>Rakib hasan</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>rakibrakib@gmail.com</small>
-                      </div>
-                  </div>
-                  <div class="col-1 ">
-                      <div >
-                          <small>11</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>0128xxxxxx</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>Abdul Jalil</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                    <div >
-                        <small>Layla Banu</small>
-                    </div>
-                  </div>
-                  <div class="col-1">
-                    <div class="justify-content-around">
-                      <button type="button" class="btn btn-outline-danger btn-sm col-5" style="padding: 0px;font-size: small;"><i class="fas fa-times" aria-hidden="true"></i></button>
-                      <button type="button" class="btn btn-outline-success btn col-5" style="padding: 0px;font-size: small;"><i class="fas fa-check" aria-hidden="true"></i></button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-              </div>
-          </div>
-
-          <!-- Class 3  section -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading3">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
-                Class 3
-              </button>
-            </h2>
-            <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <div class="row mb-3">
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Name" aria-label="Student's Name">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Email" aria-label="Student's Email">
-                  </div>
-                  <div class="col-1">
-                    <input type="text" class="form-control" placeholder="Class Roll" aria-label="Class Roll">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Contact No." aria-label="Student's Contact No.">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Father's Name" aria-label="Father's Name">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Mother's Name" aria-label="Mother's Name">
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success">+ Add</button>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-2 ">
-                      <div >
-                          <small>Rakib hasan</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>rakibrakib@gmail.com</small>
-                      </div>
-                  </div>
-                  <div class="col-1 ">
-                      <div >
-                          <small>11</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>0128xxxxxx</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>Abdul Jalil</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                    <div >
-                        <small>Layla Banu</small>
-                    </div>
-                  </div>
-                  <div class="col-1">
-                    <div class="justify-content-around">
-                      <button type="button" class="btn btn-outline-danger btn-sm col-5" style="padding: 0px;font-size: small;"><i class="fas fa-times" aria-hidden="true"></i></button>
-                      <button type="button" class="btn btn-outline-success btn col-5" style="padding: 0px;font-size: small;"><i class="fas fa-check" aria-hidden="true"></i></button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- Class 4  section -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading4">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
-                Class 4
-              </button>
-            </h2>
-            <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <div class="row mb-3">
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Name" aria-label="Student's Name">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Email" aria-label="Student's Email">
-                  </div>
-                  <div class="col-1">
-                    <input type="text" class="form-control" placeholder="Class Roll" aria-label="Class Roll">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Contact No." aria-label="Student's Contact No.">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Father's Name" aria-label="Father's Name">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Mother's Name" aria-label="Mother's Name">
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success">+ Add</button>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-2 ">
-                      <div >
-                          <small>Rakib hasan</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>rakibrakib@gmail.com</small>
-                      </div>
-                  </div>
-                  <div class="col-1 ">
-                      <div >
-                          <small>11</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>0128xxxxxx</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>Abdul Jalil</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                    <div >
-                        <small>Layla Banu</small>
-                    </div>
-                  </div>
-                  <div class="col-1">
-                    <div class="justify-content-around">
-                      <button type="button" class="btn btn-outline-danger btn-sm col-5" style="padding: 0px;font-size: small;"><i class="fas fa-times" aria-hidden="true"></i></button>
-                      <button type="button" class="btn btn-outline-success btn col-5" style="padding: 0px;font-size: small;"><i class="fas fa-check" aria-hidden="true"></i></button>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-              </div>
-          </div>
-
-          <!-- Class 5  section -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading5">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
-                Class 5
-              </button>
-            </h2>
-            <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <div class="row mb-3">
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Name" aria-label="Student's Name">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Email" aria-label="Student's Email">
-                  </div>
-                  <div class="col-1">
-                    <input type="text" class="form-control" placeholder="Class Roll" aria-label="Class Roll">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Contact No." aria-label="Student's Contact No.">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Father's Name" aria-label="Father's Name">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Mother's Name" aria-label="Mother's Name">
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success">+ Add</button>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-2 ">
-                      <div >
-                          <small>Rakib hasan</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>rakibrakib@gmail.com</small>
-                      </div>
-                  </div>
-                  <div class="col-1 ">
-                      <div >
-                          <small>11</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>0128xxxxxx</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>Abdul Jalil</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                    <div >
-                        <small>Layla Banu</small>
-                    </div>
-                  </div>
-                  <div class="col-1">
-                    <div class="justify-content-around">
-                      <button type="button" class="btn btn-outline-danger btn-sm col-5" style="padding: 0px;font-size: small;"><i class="fas fa-times" aria-hidden="true"></i></button>
-                      <button type="button" class="btn btn-outline-success btn col-5" style="padding: 0px;font-size: small;"><i class="fas fa-check" aria-hidden="true"></i></button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-          <!-- Class 6  section -->
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-heading6">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse6" aria-expanded="false" aria-controls="flush-collapse6">
-                Class 6
-              </button>
-            </h2>
-            <div id="flush-collapse6" class="accordion-collapse collapse" aria-labelledby="flush-heading6" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <div class="row mb-3">
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Name" aria-label="Student's Name">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Email" aria-label="Student's Email">
-                  </div>
-                  <div class="col-1">
-                    <input type="text" class="form-control" placeholder="Class Roll" aria-label="Class Roll">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Student's Contact No." aria-label="Student's Contact No.">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Father's Name" aria-label="Father's Name">
-                  </div>
-                  <div class="col-2">
-                    <input type="text" class="form-control" placeholder="Mother's Name" aria-label="Mother's Name">
-                  </div>
-                  <div class="col-1">
-                    <button type="button" class="btn btn-outline-success">+ Add</button>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-2 ">
-                      <div >
-                          <small>Rakib hasan</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>rakibrakib@gmail.com</small>
-                      </div>
-                  </div>
-                  <div class="col-1 ">
-                      <div >
-                          <small>11</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>0128xxxxxx</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                      <div >
-                          <small>Abdul Jalil</small>
-                      </div>
-                  </div>
-                  <div class="col-2 ">
-                    <div >
-                        <small>Layla Banu</small>
-                    </div>
-                  </div>
-                  <div class="col-1">
-                    <div class="justify-content-around">
-                      <button type="button" class="btn btn-outline-danger btn-sm col-5" style="padding: 0px;font-size: small;"><i class="fas fa-times" aria-hidden="true"></i></button>
-                      <button type="button" class="btn btn-outline-success btn col-5" style="padding: 0px;font-size: small;"><i class="fas fa-check" aria-hidden="true"></i></button>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
-              </div>
-          </div>
-
-        </div>
-
-  </section>
+    
+      </section>
   <script src="js/sidebar.js"></script>
 </body>
 </html>
